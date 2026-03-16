@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <!-- 引入 MathJax 数学公式支持 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <!-- MathJax 数学公式 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    {% seo %}
-  </head>
-  <body>
-    <header>
-      <h1><a href="/">{{ site.title }}</a></h1>
-    </header>
-    {{ content }}
-    <footer>
-      <p>本站内容采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可</p>
-    </footer>
-  </body>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="site-title"><a href="/">{{ site.title }}</a></h1>
+            <nav class="nav">
+                <a href="/">首页</a>
+                <a href="/about">关于</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            {{ content }}
+        </main>
+
+        <footer class="footer">
+            <p>© {{ site.author }} | <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></p>
+        </footer>
+    </div>
+</body>
 </html>

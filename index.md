@@ -3,12 +3,13 @@ layout: default
 title: 首页
 ---
 
-# 文章列表
+## 最近文章
 
-<ul>
+<ul class="post-list">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})
+    <li class="post-item">
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
     </li>
   {% endfor %}
 </ul>

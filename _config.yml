@@ -1,12 +1,11 @@
-title: 一些思考
-author: shi
-description: 记录数学思考
-theme: minima  # 使用 GitHub 自带的经典主题
+title: "一些思考"
+author: "shi"
+description: "记录数学思考"
+theme:
 
-# 插件配置
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
-# 这里的配置是为了让 GitHub 识别你的 CC 协议
-license: CC BY-NC-SA 4.0
+# 渲染配置
+markdown: kramdown
+kramdown:
+input: GFM
+hard_wrap: false
+syntax_highlighter: rouge
