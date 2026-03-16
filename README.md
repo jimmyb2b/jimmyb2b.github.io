@@ -1,1 +1,1 @@
-# jimmyb2b.github.io
+一些思考
