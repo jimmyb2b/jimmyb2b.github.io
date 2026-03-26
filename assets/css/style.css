@@ -17,6 +17,20 @@ body {
     box-shadow: 0 0 20px rgba(0,0,0,0.02);
 }
 
+/* 针对 MathJax 3 的公式容器设置 */
+mjx-container {
+    overflow-x: auto;   /* 开启横向滚动 */
+    overflow-y: hidden; /* 隐藏纵向滚动 */
+    max-width: 100%;    /* 限制最大宽度为父容器宽度 */
+    padding: 10px 0;    /* 给滚动条留一点呼吸空间 */
+}
+
+/* 兼容旧版或其他渲染器的通用设置 */
+.MathJax_Display, .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 /* 导航栏 */
 .header {
     display: flex;
